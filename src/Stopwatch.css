@@ -28,11 +28,37 @@
   color: #61dafb;
 }
 
+.paused {
+  opacity: 1;
+  animation-name: blink;
+  animation-duration: .95s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+    visibility: hidden;
+  }
+
+  42% {
+    opacity: 0;
+    visibility: visible;
+  }
+
+  58% {
+    opacity: 0;
+    visibility: visible;
   }
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useStopwatch} from 'react-timer-hook';
 import {IconButton} from '@fluentui/react/lib/Button';
 import {initializeIcons} from '@fluentui/react/lib/Icons';
@@ -15,6 +15,26 @@ function Stopwatch() {
     start,
   } = useStopwatch({autoStart: false});
 
+  const [blink, setBlink] = useState<'start' | 'paused' | boolean>('start');
+
+  function startTimer() {
+    start();
+    timerUnpaused();
+  }
+
+  function stopTimer() {
+    pause();
+    timerPaused();
+  }
+
+  function timerPaused() {
+    setBlink(false);
+  }
+
+  function timerUnpaused() {
+    setBlink(true);
+  }
+
   const StopButton: React.FC<{
     onClick?: React.MouseEventHandler<HTMLElement>;
   }> = () =>
@@ -22,7 +42,7 @@ function Stopwatch() {
       iconProps={{iconName: 'Stop'}}
       title="Stop"
       ariaLabel="Stop"
-      onClick={pause}
+      onClick={stopTimer}
     />;
 
   const StartButton: React.FC<{
@@ -32,12 +52,12 @@ function Stopwatch() {
       iconProps={{iconName: 'Play'}}
       title="Start"
       ariaLabel="Start"
-      onClick={start}
+      onClick={startTimer}
     />;
 
   return (
     <div style={{textAlign: 'center'}}>
-      <div style={{fontSize: '100px'}}>
+      <div className={blink ? '' : 'paused'} style={{fontSize: '100px'}}>
         <span>{hours}</span>:
         <span>{minutes}</span>:
         <span>{seconds}</span>
