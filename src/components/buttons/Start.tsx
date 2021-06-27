@@ -4,18 +4,18 @@ import {initializeIcons} from '@fluentui/react/lib/Icons';
 
 initializeIcons();
 
-const PlayButton = () =>
+const StartButton = () =>
   <IconButton
     iconProps={{iconName: 'Play'}}
-    title="Add" ariaLabel="Play"
+    title="Start" ariaLabel="Start"
   />;
 
-function PlayIconButton() {
+function StartIconButton() {
   return (
     <>
-      <PlayButton />
+      <StartButton />
     </>
   );
 }
 
-export default PlayIconButton;
+export default StartIconButton;

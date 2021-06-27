@@ -1,14 +1,14 @@
 import React from 'react';
-import './ControlBar.css';
-import Reset from './buttons/Reset';
-import Play from './buttons/Play';
-import Lap from './buttons/Lap';
+import '../components/ControlBar.css';
+import Reset from '../components/buttons/Reset';
+import Start from '../components/buttons/Start';
+import Lap from '../components/buttons/Lap';
 
 function ControlBar() {
   return (
     <div>
       <Reset />
-      <Play />
+      <Start />
       <Lap />
     </div>
   );
