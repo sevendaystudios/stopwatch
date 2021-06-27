@@ -1,5 +1,5 @@
 import React from 'react';
-import './components/numericDisplay.css';
+import './numericDisplay.css';
 
 function numericDisplay() {
   return (

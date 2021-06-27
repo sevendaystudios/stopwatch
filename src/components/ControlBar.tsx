@@ -1,8 +1,8 @@
 import React from 'react';
-import '../components/ControlBar.css';
-import Reset from '../components/buttons/Reset';
-import Start from '../components/buttons/Start';
-import Lap from '../components/buttons/Lap';
+import './ControlBar.css';
+import Reset from './buttons/Reset';
+import Start from './buttons/Start';
+import Lap from './buttons/Lap';
 
 function ControlBar() {
   return (

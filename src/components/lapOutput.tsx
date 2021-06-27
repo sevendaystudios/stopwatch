@@ -1,5 +1,5 @@
 import React from 'react';
-import '../components/LapOutput.css';
+import './LapOutput.css';
 
 function LapOutput() {
   return (
