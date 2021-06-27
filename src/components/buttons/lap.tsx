@@ -1,11 +1,21 @@
 import React from 'react';
+import {IconButton} from '@fluentui/react/lib/Button';
+import {initializeIcons} from '@fluentui/react/lib/Icons';
 
-function lap() {
+initializeIcons();
+
+const LapButton = () =>
+  <IconButton
+    iconProps={{iconName: 'Flag'}}
+    title="Lap" ariaLabel="Lap"
+  />;
+
+function LapIconButton() {
   return (
-    <div>
-      <h1>lap</h1>
-    </div>
+    <>
+      <LapButton />
+    </>
   );
 }
 
-export default lap;
+export default LapIconButton;

@@ -1,7 +1,7 @@
 import React from 'react';
-import './components/lapOutput.css';
+import './components/LapOutput.css';
 
-function lapOutput() {
+function LapOutput() {
   return (
     <div>
       <h1>lapOutput</h1>
@@ -9,4 +9,4 @@ function lapOutput() {
   );
 }
 
-export default lapOutput;
+export default LapOutput;

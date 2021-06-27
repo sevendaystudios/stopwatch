@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
+import ControlBar from './components/ControlBar';
 
 function App() {
   return (
     <div>
-      <h1>Test</h1>
+      <ControlBar />
     </div>
   );
 }

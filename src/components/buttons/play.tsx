@@ -1,11 +1,21 @@
 import React from 'react';
+import {IconButton} from '@fluentui/react/lib/Button';
+import {initializeIcons} from '@fluentui/react/lib/Icons';
 
-function play() {
+initializeIcons();
+
+const PlayButton = () =>
+  <IconButton
+    iconProps={{iconName: 'Play'}}
+    title="Add" ariaLabel="Play"
+  />;
+
+function PlayIconButton() {
   return (
-    <div>
-      <h1>play</h1>
-    </div>
+    <>
+      <PlayButton />
+    </>
   );
 }
 
-export default play;
+export default PlayIconButton;

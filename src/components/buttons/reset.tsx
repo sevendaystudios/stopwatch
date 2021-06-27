@@ -1,11 +1,21 @@
 import React from 'react';
+import {IconButton} from '@fluentui/react/lib/Button';
+import {initializeIcons} from '@fluentui/react/lib/Icons';
 
-function reset() {
+initializeIcons();
+
+const ResetButton = () =>
+  <IconButton
+    iconProps={{iconName: 'RevToggleKey'}}
+    title="Reset" ariaLabel="Reset"
+  />;
+
+function ResetIconButton() {
   return (
-    <div>
-      <h1>reset</h1>
-    </div>
+    <>
+      <ResetButton />
+    </>
   );
 }
 
-export default reset;
+export default ResetIconButton;

@@ -1,11 +1,21 @@
 import React from 'react';
+import {IconButton} from '@fluentui/react/lib/Button';
+import {initializeIcons} from '@fluentui/react/lib/Icons';
 
-function stop() {
+initializeIcons();
+
+const StopButton = () =>
+  <IconButton
+    iconProps={{iconName: 'Stop'}}
+    title="Stop" ariaLabel="Stop"
+  />;
+
+function StopIconButton() {
   return (
-    <div>
-      <h1>stop</h1>
-    </div>
+    <>
+      <StopButton />
+    </>
   );
 }
 
-export default stop;
+export default StopIconButton;
