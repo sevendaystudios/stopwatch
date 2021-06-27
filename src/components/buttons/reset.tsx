@@ -4,18 +4,13 @@ import {initializeIcons} from '@fluentui/react/lib/Icons';
 
 initializeIcons();
 
-const ResetButton = () =>
+const ResetButton: React.FC<{
+  onClick?: React.MouseEventHandler<HTMLElement>;
+}> = () =>
   <IconButton
     iconProps={{iconName: 'RevToggleKey'}}
-    title="Reset" ariaLabel="Reset"
+    title="Reset"
+    ariaLabel="Reset"
   />;
 
-function ResetIconButton() {
-  return (
-    <>
-      <ResetButton />
-    </>
-  );
-}
-
-export default ResetIconButton;
+export default ResetButton;

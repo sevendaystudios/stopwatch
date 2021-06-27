@@ -4,18 +4,13 @@ import {initializeIcons} from '@fluentui/react/lib/Icons';
 
 initializeIcons();
 
-const StopButton = () =>
+const StopButton: React.FC<{
+  onClick?: React.MouseEventHandler<HTMLElement>;
+}> = () =>
   <IconButton
     iconProps={{iconName: 'Stop'}}
-    title="Stop" ariaLabel="Stop"
+    title="Stop"
+    ariaLabel="Stop"
   />;
 
-function StopIconButton() {
-  return (
-    <>
-      <StopButton />
-    </>
-  );
-}
-
-export default StopIconButton;
+export default StopButton;

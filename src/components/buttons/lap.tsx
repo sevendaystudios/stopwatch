@@ -4,18 +4,13 @@ import {initializeIcons} from '@fluentui/react/lib/Icons';
 
 initializeIcons();
 
-const LapButton = () =>
+const LapButton: React.FC<{
+  onClick?: React.MouseEventHandler<HTMLElement>;
+}> = () =>
   <IconButton
     iconProps={{iconName: 'Flag'}}
-    title="Lap" ariaLabel="Lap"
+    title="Lap"
+    ariaLabel="Lap"
   />;
 
-function LapIconButton() {
-  return (
-    <>
-      <LapButton />
-    </>
-  );
-}
-
-export default LapIconButton;
+export default LapButton;

@@ -4,18 +4,13 @@ import {initializeIcons} from '@fluentui/react/lib/Icons';
 
 initializeIcons();
 
-const StartButton = () =>
+const StartButton: React.FC<{
+  onClick?: React.MouseEventHandler<HTMLElement>;
+}> = () =>
   <IconButton
     iconProps={{iconName: 'Play'}}
-    title="Start" ariaLabel="Start"
+    title="Start"
+    ariaLabel="Start"
   />;
 
-function StartIconButton() {
-  return (
-    <>
-      <StartButton />
-    </>
-  );
-}
-
-export default StartIconButton;
+export default StartButton;

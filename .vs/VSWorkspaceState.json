@@ -2,9 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\components",
-    "\\src\\components\\buttons"
+    "\\src\\components"
   ],
-  "SelectedNode": "\\src\\components\\buttons\\play.tsx",
+  "SelectedNode": "\\.eslintrc.json",
   "PreviewInSolutionExplorer": false
 }

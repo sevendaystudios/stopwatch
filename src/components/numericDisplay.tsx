@@ -1,12 +1,12 @@
 import React from 'react';
-import '../components/NumericDisplay.css';
+import './components/numericDisplay.css';
 
-function NumericDisplay() {
+function numericDisplay() {
   return (
     <div>
-      <h1>NumericDisplay</h1>
+      <h1>numericDisplay</h1>
     </div>
   );
 }
 
-export default NumericDisplay;
+export default numericDisplay;
