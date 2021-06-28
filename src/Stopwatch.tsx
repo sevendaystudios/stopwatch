@@ -1,16 +1,13 @@
 import React, {useState} from 'react';
 import {useStopwatch} from 'react-timer-hook';
-import {IconButton} from '@fluentui/react/lib/Button';
-import {initializeIcons} from '@fluentui/react/lib/Icons';
 import {NeutralColors} from '@fluentui/theme';
 import {SharedColors} from '@fluentui/theme';
 import {Depths} from '@fluentui/theme';
+import ControlButton from './components/buttons/controlButton';
 import './Stopwatch.css';
 import './components/timerSection.css';
 import './components/controlSection.css';
 import './components/lapSection.css';
-
-initializeIcons();
 
 function Stopwatch() {
   const {
@@ -40,39 +37,6 @@ function Stopwatch() {
   function timerUnpaused() {
     setBlink(true);
   }
-
-  const StopButton: React.FC<{
-    onClick?: React.MouseEventHandler<HTMLElement>;
-  }> = () =>
-    <IconButton
-      iconProps={{iconName: 'Stop'}}
-      title='Stop'
-      ariaLabel='Stop'
-      onClick={stopTimer}
-      style={{color: SharedColors.red20}}
-    />;
-
-  const StartButton: React.FC<{
-    onClick?: React.MouseEventHandler<HTMLElement>;
-  }> = () =>
-    <IconButton
-      iconProps={{iconName: 'Play'}}
-      title='Start'
-      ariaLabel='Start'
-      onClick={startTimer}
-      style={{color: SharedColors.green20}}
-    />;
-
-  const LapButton: React.FC<{
-    onClick?: React.MouseEventHandler<HTMLElement>;
-  }> = () =>
-    <IconButton
-      iconProps={{iconName: 'Flag'}}
-      title='Lap'
-      ariaLabel='Lap'
-      onClick={setLap}
-      style={{color: SharedColors.cyan20}}
-    />;
 
   const setLap = () => {
     const currentTime = `${hours}: ${minutes}: ${seconds}`;
@@ -104,9 +68,27 @@ function Stopwatch() {
       </div>
       <div className='controlSection'>
         <div className='innerWrapper'>
-          <StartButton />
-          <StopButton />
-          <LapButton />
+          <ControlButton
+            iconProps={{iconName: 'Stop'}}
+            title='Stop'
+            ariaLabel='Stop'
+            setLap={stopTimer}
+            buttonStyle={{color: SharedColors.red20}}
+          />
+          <ControlButton
+            iconProps={{iconName: 'Play'}}
+            title='Start'
+            ariaLabel='Start'
+            setLap={startTimer}
+            buttonStyle={{color: SharedColors.green20}}
+          />
+          <ControlButton
+            iconProps={{iconName: 'Flag'}}
+            title='Flag'
+            ariaLabel='Flag'
+            setLap={setLap}
+            buttonStyle={{color: SharedColors.cyan20}}
+          />
         </div>
       </div>
     </div>

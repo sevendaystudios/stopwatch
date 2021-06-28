@@ -5,6 +5,6 @@
     "\\src\\components",
     "\\src\\components\\buttons"
   ],
-  "SelectedNode": "\\src\\components",
+  "SelectedNode": "\\src\\components\\buttons\\controlButton.tsx",
   "PreviewInSolutionExplorer": false
 }
