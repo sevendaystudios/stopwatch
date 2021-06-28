@@ -60,6 +60,16 @@ function Stopwatch() {
       style={{color: SharedColors.green20}}
     />;
 
+  const LapButton: React.FC<{
+    onClick?: React.MouseEventHandler<HTMLElement>;
+  }> = () =>
+    <IconButton
+      iconProps={{iconName: 'Flag'}}
+      title='Lap'
+      ariaLabel='Lap'
+      style={{color: SharedColors.cyan20}}
+    />;
+
   return (
     <div
       className='outerWrapper'
@@ -87,6 +97,7 @@ function Stopwatch() {
         <div className='innerWrapper'>
           <StartButton />
           <StopButton />
+          <LapButton />
         </div>
       </div>
     </div>
