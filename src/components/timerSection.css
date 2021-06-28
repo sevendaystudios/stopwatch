@@ -1,0 +1,49 @@
+/*--- Timer Section ---*/
+.timerSection {
+  display: grid;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  height: 50vmin;
+  width: 50vmin;
+  border-radius: 50%;
+  border: 2px solid #f3f2f1;
+}
+
+.timer .timerInnerWrapper {
+  padding-bottom: .25ex;
+  font-size: 100px;
+}
+
+@media screen and (orientation: landscape) {
+  /*--- Timer Section ---*/
+  .timerSection {
+    grid-area: 1/1/4/1;
+  }
+
+  .timer {
+    font-size: 4rem;
+    height: 38vw;
+    width: 38vw;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  /*--- Timer Section ---*/
+  .timerSection {
+    grid-area: 1/1/1/1;
+  }
+
+  .timer {
+    font-size: 4rem;
+    height: 38vh;
+    width: 38vh;
+  }
+}

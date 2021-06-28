@@ -1,0 +1,47 @@
+/*--- Control Section ---*/
+.controlSection {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.controlSection .innerWrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.controlSection .innerWrapper button {
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+.controlSection .innerWrapper .root-52:hover {
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+.controlSection .innerWrapper button i {
+  font-size: 3rem;
+}
+
+@media screen and (orientation: landscape) {
+  /*--- Control Section ---*/
+  .controlSection {
+    grid-area: 2/2/2/2;
+  }
+
+  .controlSection .innerWrapper {
+    width: 40vmax;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  /*--- Control Section ---*/
+  .controlSection {
+    grid-area: 2/1/2/1;
+  }
+
+  .controlSection .innerWrapper {
+    width: 40vmax;
+  }
+}

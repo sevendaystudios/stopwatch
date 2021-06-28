@@ -6,6 +6,9 @@ import {NeutralColors} from '@fluentui/theme';
 import {SharedColors} from '@fluentui/theme';
 import {Depths} from '@fluentui/theme';
 import './Stopwatch.css';
+import './components/timerSection.css';
+import './components/controlSection.css';
+import './components/lapSection.css';
 
 initializeIcons();
 
