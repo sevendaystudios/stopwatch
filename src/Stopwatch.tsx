@@ -1,12 +1,10 @@
 import React, {useState} from 'react';
 import {useStopwatch} from 'react-timer-hook';
 import {NeutralColors} from '@fluentui/theme';
-import {SharedColors} from '@fluentui/theme';
 import {Depths} from '@fluentui/theme';
-import ControlButton from './components/buttons/controlButton';
+import ControlSection from './components/controlSection';
 import './Stopwatch.css';
 import './components/timerSection.css';
-import './components/controlSection.css';
 import './components/lapSection.css';
 
 function Stopwatch() {
@@ -66,31 +64,11 @@ function Stopwatch() {
       </div>
       <div className='lapSection'>
       </div>
-      <div className='controlSection'>
-        <div className='innerWrapper'>
-          <ControlButton
-            iconProps={{iconName: 'Stop'}}
-            title='Stop'
-            ariaLabel='Stop'
-            setLap={stopTimer}
-            buttonStyle={{color: SharedColors.red20}}
-          />
-          <ControlButton
-            iconProps={{iconName: 'Play'}}
-            title='Start'
-            ariaLabel='Start'
-            setLap={startTimer}
-            buttonStyle={{color: SharedColors.green20}}
-          />
-          <ControlButton
-            iconProps={{iconName: 'Flag'}}
-            title='Flag'
-            ariaLabel='Flag'
-            setLap={setLap}
-            buttonStyle={{color: SharedColors.cyan20}}
-          />
-        </div>
-      </div>
+      <ControlSection
+        startTimer={startTimer}
+        stopTimer={stopTimer}
+        setLap={setLap}
+      />
     </div>
   );
 }
