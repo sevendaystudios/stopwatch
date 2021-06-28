@@ -2,6 +2,9 @@ import React, {useState} from 'react';
 import {useStopwatch} from 'react-timer-hook';
 import {IconButton} from '@fluentui/react/lib/Button';
 import {initializeIcons} from '@fluentui/react/lib/Icons';
+import {NeutralColors} from '@fluentui/theme';
+import {SharedColors} from '@fluentui/theme';
+import {Depths} from '@fluentui/theme';
 import './Stopwatch.css';
 
 initializeIcons();
@@ -40,9 +43,10 @@ function Stopwatch() {
   }> = () =>
     <IconButton
       iconProps={{iconName: 'Stop'}}
-      title="Stop"
-      ariaLabel="Stop"
+      title='Stop'
+      ariaLabel='Stop'
       onClick={stopTimer}
+      style={{color: SharedColors.red20}}
     />;
 
   const StartButton: React.FC<{
@@ -50,21 +54,40 @@ function Stopwatch() {
   }> = () =>
     <IconButton
       iconProps={{iconName: 'Play'}}
-      title="Start"
-      ariaLabel="Start"
+      title='Start'
+      ariaLabel='Start'
       onClick={startTimer}
+      style={{color: SharedColors.green20}}
     />;
 
   return (
-    <div style={{textAlign: 'center'}}>
-      <div className={blink ? '' : 'paused'} style={{fontSize: '100px'}}>
-        <span>{hours}</span>:
-        <span>{minutes}</span>:
-        <span>{seconds}</span>
+    <div
+      className='outerWrapper'
+      style={{backgroundColor: NeutralColors.gray180}}
+    >
+      <div className='timerSection'>
+        <div
+          className={'timer'}
+          style={{
+            color: NeutralColors.gray10,
+            backgroundColor: NeutralColors.gray160,
+            boxShadow: Depths.depth16,
+          }}
+        >
+          <div className={`'timerInnerWrapper' ${blink ? '' : 'paused'}`}>
+            <span>{hours}</span>:
+            <span>{minutes}</span>:
+            <span>{seconds}</span>
+          </div>
+        </div>
       </div>
-      <div>
-        <StartButton />
-        <StopButton />
+      <div className='lapSection'>
+      </div>
+      <div className='controlSection'>
+        <div className='innerWrapper'>
+          <StartButton />
+          <StopButton />
+        </div>
       </div>
     </div>
   );

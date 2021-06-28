@@ -1,31 +1,29 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.outerWrapper {
+  display: grid;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  align-content: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  height: 50vmin;
+  width: 50vmin;
+  border-radius: 50%;
+  border: 2px solid #f3f2f1;
+}
+
+.timer .timerInnerWrapper {
+  padding-bottom: .25ex;
+  font-size: 100px;
 }
 
 .paused {
@@ -35,15 +33,6 @@
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 @keyframes blink {
@@ -60,5 +49,115 @@
   58% {
     opacity: 0;
     visibility: visible;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .outerWrapper {
+    grid-template-rows: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .timerSection {
+    display: grid;
+    grid-area: 1/1/3/1;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .timer {
+    font-size: 4rem;
+    height: 70vmin;
+    width: 70vmin;
+  }
+
+  .lapSection {
+    display: grid;
+    grid-area: 1/2/1/2;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .controlSection {
+    display: grid;
+    grid-area: 2/2/2/2;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .controlSection .innerWrapper {
+    display: flex;
+    width: 40vmax;
+    justify-content: space-around;
+  }
+
+  .controlSection .innerWrapper button {
+    height: 48px;
+    width: 48px;
+  }
+
+  .controlSection .innerWrapper .root-52:hover {
+    height: 48px;
+    width: 48px;
+  }
+
+  .controlSection .innerWrapper button i {
+    font-size: 42px;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .outerWrapper {
+    grid-template-rows: 6fr 2fr 2fr;
+    grid-template-columns: 1fr;
+  }
+
+  .timerSection {
+    display: grid;
+    grid-area: 1/1/1/1;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .timer {
+    font-size: 4rem;
+    height: 70vmin;
+    width: 70vmin;
+  }
+
+  .lapSection {
+    display: grid;
+    grid-area: 2/1/2/1;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .controlSection {
+    display: grid;
+    grid-area: 3/1/3/1;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .controlSection .innerWrapper {
+    display: flex;
+    width: 40vmax;
+    justify-content: space-around;
+  }
+
+  .controlSection .innerWrapper button {
+    height: 48px;
+    width: 48px;
+  }
+
+  .controlSection .innerWrapper .root-52:hover {
+    height: 48px;
+    width: 48px;
+  }
+
+  .controlSection .innerWrapper button i {
+    font-size: 42px;
   }
 }
