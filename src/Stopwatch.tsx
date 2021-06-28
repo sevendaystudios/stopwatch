@@ -3,9 +3,9 @@ import {useStopwatch} from 'react-timer-hook';
 import {NeutralColors} from '@fluentui/theme';
 import {Depths} from '@fluentui/theme';
 import ControlSection from './components/controlSection';
+import LapSection from './components/lapSection';
 import './Stopwatch.css';
 import './components/timerSection.css';
-import './components/lapSection.css';
 
 function Stopwatch() {
   const {
@@ -62,8 +62,7 @@ function Stopwatch() {
           </div>
         </div>
       </div>
-      <div className='lapSection'>
-      </div>
+      <LapSection />
       <ControlSection
         startTimer={startTimer}
         stopTimer={stopTimer}
