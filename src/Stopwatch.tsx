@@ -67,8 +67,14 @@ function Stopwatch() {
       iconProps={{iconName: 'Flag'}}
       title='Lap'
       ariaLabel='Lap'
+      onClick={setLap}
       style={{color: SharedColors.cyan20}}
     />;
+
+  const setLap = () => {
+    const currentTime = `${hours}: ${minutes}: ${seconds}`;
+    console.log(currentTime);
+  };
 
   return (
     <div

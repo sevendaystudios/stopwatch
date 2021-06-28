@@ -98,13 +98,13 @@
 @media screen and (orientation: landscape) {
   /*--- Outer Wrapper ---*/
   .outerWrapper {
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
 
   /*--- Timer Section ---*/
   .timerSection {
-    grid-area: 1/1/3/1;
+    grid-area: 1/1/4/1;
   }
 
   .timer {
@@ -131,7 +131,7 @@
 @media screen and (orientation: portrait) {
   /*--- Outer Wrapper ---*/
   .outerWrapper {
-    grid-template-rows: 6fr 2fr 2fr;
+    grid-template-rows: 7fr 2fr 2fr;
     grid-template-columns: 1fr;
   }
 
@@ -148,12 +148,12 @@
 
   /*--- Lap Section ---*/
   .lapSection {
-    grid-area: 2/1/2/1;
+    grid-area: 3/1/3/1;
   }
 
   /*--- Control Section ---*/
   .controlSection {
-    grid-area: 3/1/3/1;
+    grid-area: 2/1/2/1;
   }
 
   .controlSection .innerWrapper {
