@@ -1,3 +1,4 @@
+/*--- Outer Wrapper ---*/
 .outerWrapper {
   display: grid;
   position: relative;
@@ -8,6 +9,14 @@
   align-items: center;
   margin: 0;
   padding: 0;
+}
+
+/*--- Timer Section ---*/
+.timerSection {
+  display: grid;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .timer {
@@ -26,6 +35,40 @@
   font-size: 100px;
 }
 
+/*--- Control Section ---*/
+.lapSection {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+/*--- Control Section ---*/
+.controlSection {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.controlSection .innerWrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.controlSection .innerWrapper button {
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+.controlSection .innerWrapper .root-52:hover {
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+.controlSection .innerWrapper button i {
+  font-size: 3rem;
+}
+
+/*--- Animation ---*/
 .paused {
   opacity: 1;
   animation-name: blink;
@@ -53,111 +96,67 @@
 }
 
 @media screen and (orientation: landscape) {
+  /*--- Outer Wrapper ---*/
   .outerWrapper {
     grid-template-rows: 2fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
 
+  /*--- Timer Section ---*/
   .timerSection {
-    display: grid;
     grid-area: 1/1/3/1;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
   }
 
   .timer {
     font-size: 4rem;
-    height: 70vmin;
-    width: 70vmin;
+    height: 38vw;
+    width: 38vw;
   }
 
+  /*--- Lap Section ---*/
   .lapSection {
-    display: grid;
     grid-area: 1/2/1/2;
-    align-items: center;
-    justify-content: center;
   }
 
+  /*--- Control Section ---*/
   .controlSection {
-    display: grid;
     grid-area: 2/2/2/2;
-    align-items: center;
-    justify-content: center;
   }
 
   .controlSection .innerWrapper {
-    display: flex;
     width: 40vmax;
-    justify-content: space-around;
-  }
-
-  .controlSection .innerWrapper button {
-    height: 48px;
-    width: 48px;
-  }
-
-  .controlSection .innerWrapper .root-52:hover {
-    height: 48px;
-    width: 48px;
-  }
-
-  .controlSection .innerWrapper button i {
-    font-size: 42px;
   }
 }
 
 @media screen and (orientation: portrait) {
+  /*--- Outer Wrapper ---*/
   .outerWrapper {
     grid-template-rows: 6fr 2fr 2fr;
     grid-template-columns: 1fr;
   }
 
+  /*--- Timer Section ---*/
   .timerSection {
-    display: grid;
     grid-area: 1/1/1/1;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
   }
 
   .timer {
     font-size: 4rem;
-    height: 70vmin;
-    width: 70vmin;
+    height: 38vh;
+    width: 38vh;
   }
 
+  /*--- Lap Section ---*/
   .lapSection {
-    display: grid;
     grid-area: 2/1/2/1;
-    align-items: center;
-    justify-content: center;
   }
 
+  /*--- Control Section ---*/
   .controlSection {
-    display: grid;
     grid-area: 3/1/3/1;
-    align-items: center;
-    justify-content: center;
   }
 
   .controlSection .innerWrapper {
-    display: flex;
     width: 40vmax;
-    justify-content: space-around;
-  }
-
-  .controlSection .innerWrapper button {
-    height: 48px;
-    width: 48px;
-  }
-
-  .controlSection .innerWrapper .root-52:hover {
-    height: 48px;
-    width: 48px;
-  }
-
-  .controlSection .innerWrapper button i {
-    font-size: 42px;
   }
 }
