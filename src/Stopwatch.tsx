@@ -1,11 +1,10 @@
 import React, {useState} from 'react';
 import {useStopwatch} from 'react-timer-hook';
 import {NeutralColors} from '@fluentui/theme';
-import {Depths} from '@fluentui/theme';
+import TimerSection from './components/timerSection';
 import ControlSection from './components/controlSection';
 import LapSection from './components/lapSection';
 import './Stopwatch.css';
-import './components/timerSection.css';
 
 function Stopwatch() {
   const {
@@ -46,22 +45,12 @@ function Stopwatch() {
       className='outerWrapper'
       style={{backgroundColor: NeutralColors.gray180}}
     >
-      <div className='timerSection'>
-        <div
-          className={'timer'}
-          style={{
-            color: NeutralColors.gray10,
-            backgroundColor: NeutralColors.gray160,
-            boxShadow: Depths.depth16,
-          }}
-        >
-          <div className={`'timerInnerWrapper' ${blink ? '' : 'paused'}`}>
-            <span>{hours}</span>:
-            <span>{minutes}</span>:
-            <span>{seconds}</span>
-          </div>
-        </div>
-      </div>
+      <TimerSection
+        hours={hours}
+        minutes={minutes}
+        seconds={seconds}
+        blink={blink}
+      />
       <LapSection />
       <ControlSection
         startTimer={startTimer}
