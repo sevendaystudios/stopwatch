@@ -3,15 +3,20 @@ import {NeutralColors} from '@fluentui/theme';
 import './lapSection.css';
 
 const LapSection = (props: {
-  currentTime: string
+  currentTime: Array<string>
 }): any => {
+  const laps = props.currentTime?.map((lap) =>
+    <li key={lap.toString()}>
+      {lap}
+    </li>,
+  );
   return (
     <div className='lapSection'>
-      <ul style={{color: NeutralColors.gray100}}>
-        <li>
-          {props.currentTime}
-        </li>
-      </ul>
+      <div className="innerWrapper">
+        <ul style={{color: NeutralColors.gray100}}>
+          {laps}
+        </ul>
+      </div>
     </div>
   );
 };

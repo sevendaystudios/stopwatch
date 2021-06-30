@@ -5,13 +5,22 @@
   justify-content: center;
 }
 
-.lapSection ul li {
-  padding: 0;
-  margin: 0;
-  padding-left: 1rem;
+.lapSection .innerWrapper {
+  display: grid;
+  width: 50vmin;
+  overflow: hidden;
+  overflow-y: scroll;
+  justify-content: center;
+  align-content: center;
 }
 
-.lapSection ul li {
+.lapSection .innerWrapper ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.lapSection .innerWrapper ul li {
   font-size: 1.5rem;
   list-style: decimal;
   padding-left: 1rem;
@@ -22,11 +31,27 @@
   .lapSection {
     grid-area: 2/2/3/2;
   }
+
+  .lapSection .innerWrapper {
+    height: 30vh;
+  }
+
+  .lapSection .innerWrapper ul {
+    height: 30vh;
+  }
 }
 
 @media screen and (orientation: portrait) {
   /*--- Lap Section ---*/
   .lapSection {
     grid-area: 4/1/5/1;
+  }
+
+  .lapSection .innerWrapper {
+    height: 18vh;
+  }
+
+  .lapSection .innerWrapper ul {
+    height: 18vh;
   }
 }

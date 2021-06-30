@@ -17,11 +17,11 @@ function Stopwatch() {
 
   const [blink, setBlink] = useState<'start' | 'paused' | boolean>('start');
 
-  const [currentTime, setCurrentTime] =
-    useState<string>(`${hours} : ${minutes} : ${seconds}`);
+  const [currentTime, setCurrentTime] = useState<Array<string>>([]);
 
   function setLap() {
-    setCurrentTime((currentTime) => `${hours} : ${minutes} : ${seconds}`);
+    const time = `${hours} : ${minutes} : ${seconds}`;
+    setCurrentTime((arr) => [...arr, `${time}`]);
   }
 
   function startTimer() {
