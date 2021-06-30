@@ -25,7 +25,7 @@
 @media screen and (orientation: landscape) {
   /*--- Timer Section ---*/
   .timerSection {
-    grid-area: 1/1/4/1;
+    grid-area: 1/1/6/1;
   }
 
   .timer {
@@ -38,7 +38,7 @@
 @media screen and (orientation: portrait) {
   /*--- Timer Section ---*/
   .timerSection {
-    grid-area: 1/1/1/1;
+    grid-area: 1/1/3/1;
   }
 
   .timer {

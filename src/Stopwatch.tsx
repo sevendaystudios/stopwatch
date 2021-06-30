@@ -17,6 +17,13 @@ function Stopwatch() {
 
   const [blink, setBlink] = useState<'start' | 'paused' | boolean>('start');
 
+  const [currentTime, setCurrentTime] =
+    useState<string>(`${hours} : ${minutes} : ${seconds}`);
+
+  function setLap() {
+    setCurrentTime((currentTime) => `${hours} : ${minutes} : ${seconds}`);
+  }
+
   function startTimer() {
     start();
     timerUnpaused();
@@ -35,11 +42,6 @@ function Stopwatch() {
     setBlink(true);
   }
 
-  const setLap = () => {
-    const currentTime = `${hours}: ${minutes}: ${seconds}`;
-    console.log(currentTime);
-  };
-
   return (
     <div
       className='outerWrapper'
@@ -51,11 +53,13 @@ function Stopwatch() {
         seconds={seconds}
         blink={blink}
       />
-      <LapSection />
       <ControlSection
         startTimer={startTimer}
         stopTimer={stopTimer}
         setLap={setLap}
+      />
+      <LapSection
+        currentTime={currentTime}
       />
     </div>
   );

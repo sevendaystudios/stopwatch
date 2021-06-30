@@ -27,7 +27,7 @@
 @media screen and (orientation: landscape) {
   /*--- Control Section ---*/
   .controlSection {
-    grid-area: 2/2/2/2;
+    grid-area: 3/2/4/2;
   }
 
   .controlSection .innerWrapper {
@@ -38,7 +38,7 @@
 @media screen and (orientation: portrait) {
   /*--- Control Section ---*/
   .controlSection {
-    grid-area: 2/1/2/1;
+    grid-area: 3/1/4/1;
   }
 
   .controlSection .innerWrapper {

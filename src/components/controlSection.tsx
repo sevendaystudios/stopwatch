@@ -15,21 +15,21 @@ const ControlSection = (props: {
           iconProps={{iconName: 'Stop'}}
           title='Stop'
           ariaLabel='Stop'
-          setLap={props.stopTimer}
+          onClick={props.stopTimer}
           buttonStyle={{color: SharedColors.red20}}
         />
         <ControlButton
           iconProps={{iconName: 'Play'}}
           title='Start'
           ariaLabel='Start'
-          setLap={props.startTimer}
+          onClick={props.startTimer}
           buttonStyle={{color: SharedColors.green20}}
         />
         <ControlButton
           iconProps={{iconName: 'Flag'}}
           title='Flag'
           ariaLabel='Flag'
-          setLap={props.setLap}
+          onClick={props.setLap}
           buttonStyle={{color: SharedColors.cyan20}}
         />
       </div>

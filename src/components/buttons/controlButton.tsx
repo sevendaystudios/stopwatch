@@ -8,7 +8,7 @@ const ControlButton = (props: {
   iconProps: any,
   title: string,
   ariaLabel: string,
-  setLap: any,
+  onClick: any,
   buttonStyle: any;
 }): any =>
   <IconButton
@@ -16,7 +16,7 @@ const ControlButton = (props: {
     title={props.title}
     ariaLabel={props.ariaLabel}
     style={props.buttonStyle}
-    onClick={props.setLap}
+    onClick={props.onClick}
   />;
 
 export default ControlButton;

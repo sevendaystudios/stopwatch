@@ -5,16 +5,28 @@
   justify-content: center;
 }
 
+.lapSection ul li {
+  padding: 0;
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.lapSection ul li {
+  font-size: 1.5rem;
+  list-style: decimal;
+  padding-left: 1rem;
+}
+
 @media screen and (orientation: landscape) {
   /*--- Lap Section ---*/
   .lapSection {
-    grid-area: 1/2/1/2;
+    grid-area: 2/2/3/2;
   }
 }
 
 @media screen and (orientation: portrait) {
   /*--- Lap Section ---*/
   .lapSection {
-    grid-area: 3/1/3/1;
+    grid-area: 4/1/5/1;
   }
 }
